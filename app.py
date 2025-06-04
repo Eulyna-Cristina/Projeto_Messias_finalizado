@@ -102,6 +102,10 @@ def apagar_termo(termo_id):
 def duvidas():
     return render_template('duvidas.html')
 
+@app.route('/conteudo')
+def conteudo():
+    return render_template('conteudo.html')
+
 @app.route('/ask_gemini', methods=['POST'])
 def ask_gemini():
     if model is None:

@@ -1,0 +1,93 @@
+{% extends "modelo.html" %}
+
+{% block conteudo %}
+<div class="container text-center mt-4">
+    <h2>Fundamentos da Programação em Python</h2>
+
+    <!-- Estruturas de Seleção -->
+    <section class="mb-4">
+        <h3>Estruturas de Seleção</h3>
+        <p>
+            Permitem a execução de diferentes blocos de código com base em condições utilizando <code>if</code>, <code>elif</code> e <code>else</code>.
+        </p>
+        <h4 class="text-center">Exemplo de Código:</h4>
+        <div class="d-flex justify-content-center">
+            <pre style="max-width: 400px;"><code>
+idade = int(input("Digite sua idade: "))
+
+if idade >= 18:
+    print("Você é maior de idade.")
+else:
+    print("Você é menor de idade.")
+            </code></pre>
+        </div>
+    </section>
+
+    <!-- Estruturas de Repetição -->
+    <section class="mb-4">
+        <h3>Estruturas de Repetição</h3>
+        <p>
+            Permitem repetir um bloco de código várias vezes utilizando <code>for</code> e <code>while</code>.
+        </p>
+        <h4 class="text-center">Exemplo de Código:</h4>
+        <div class="d-flex justify-content-center">
+            <pre style="max-width: 400px;"><code>
+for i in range(5):
+    print(f"Execução número {i + 1}")
+            </code></pre>
+        </div>
+    </section>
+
+    <!-- Vetores e Matrizes -->
+    <section class="mb-4">
+        <h3>Vetores e Matrizes</h3>
+        <p>
+            Vetores são listas unidimensionais, enquanto matrizes são listas de listas (bidimensionais).
+        </p>
+        <h4 class="text-center">Exemplo de Código:</h4>
+        <div class="d-flex justify-content-center">
+            <pre style="max-width: 400px;"><code>
+matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+for linha in matriz:
+    print(linha)
+            </code></pre>
+        </div>
+    </section>
+
+    <!-- Funções e Procedimentos -->
+    <section class="mb-4">
+        <h3>Funções e Procedimentos</h3>
+        <p>
+            Funções encapsulam lógica para reutilização e organização de código.
+        </p>
+        <h4 class="text-center">Exemplo de Código:</h4>
+        <div class="d-flex justify-content-center">
+            <pre style="max-width: 400px;"><code>
+def saudacao(nome):
+    return f"Olá, {nome}!"
+
+print(saudacao("Maria"))
+            </code></pre>
+        </div>
+    </section>
+
+    <!-- Tratamento de Exceção -->
+    <section class="mb-4">
+        <h3>Tratamento de Exceção</h3>
+        <p>
+            O tratamento de exceções em Python é feito com o bloco <code>try</code> e <code>except</code>. Ele serve para capturar e lidar com erros que podem ocorrer durante a execução do programa, evitando que o programa pare inesperadamente.
+        </p>
+        <h4 class="text-center">Exemplo de Código:</h4>
+        <div class="d-flex justify-content-center">
+            <pre style="max-width: 400px;"><code>
+try:
+    numero = int(input("Digite um número inteiro: "))
+    print(f"Você digitou: {numero}")
+except ValueError:
+    print("Valor inválido! Por favor, digite um número inteiro.")
+            </code></pre>
+        </div>
+    </section>
+</div>
+{% endblock %}
